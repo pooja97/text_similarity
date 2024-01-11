@@ -21,7 +21,7 @@ Programming Language:
 
 **Method 3 - Python run:** <br> 
     clone the repository 
-    run the follwing commands on the terminal `source env/bin/activate` <br>
+    run the follwing commands on the terminal <br> `source env/bin/activate` <br>
                                               `pip3 install -r requirements.txt` <br>
                                               `python3 app.py` <br>
     It will run on the url http://127.0.0.1:80
