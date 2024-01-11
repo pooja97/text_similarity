@@ -5,9 +5,9 @@
 Created a Flask app to check text similarity using Bag Of Words and Cosine Similarity metric. It does not consider punctuations and the position of the words. Takes two text inputs from the user and performs similarity check by creating Bag Of Words (dictionary of frequency of each word in the text; {word:frequency}) and using Cosine Similarity (a metric used to measure how similar two vectors are.) 
 
 ## Technologies Used
-Programming Language:
+Programming Language:<br>
     python3<br>
-    HTML and JavaScript (for creating UI and sending the user data as a POST request) <br> 
+    HTML and JavaScript (for creating UI and sending the user's input data as a POST request) <br> 
 
 ## To Run: 
 **Method 1 - Cloning the GitHub repository:** <br>
