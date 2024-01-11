@@ -10,14 +10,15 @@ Programming Language:<br>
     HTML and JavaScript (for creating UI and sending the user's input data as a POST request) <br> 
 
 ## To Run: 
-**Method 1 - Cloning the GitHub repository:** <br>
+
+**Method 1 - Pulling the image from DockerHub:** <br>
+    `docker pull pooyadav209712/text-similarity:latest` <br>
+    `docker run -p 80:80 pooyadav209712/text-similarity:latest`
+
+**Method 2 - Cloning the GitHub repository:** <br>
     Clone the repository<br>
     cd to the cloned folder and within that folder run command <br> `docker build -t text-similarity .` using terminal. <br> 
     Once the docker image is created run command `docker run -p 80:80 text-similarity`
-
-**Method 2 - Pulling the image from DockerHub:** <br>
-    `docker pull pooyadav209712/text-similarity:latest` <br>
-    `docker run -p 80:80 pooyadav209712/text-similarity:latest`
 
 **Method 3 - Python run:** <br> 
     Clone the repository <br>
