@@ -17,7 +17,7 @@ Programming Language:<br>
 
 **Method 2 - Pulling the image from DockerHub:** <br>
     `docker pull pooyadav209712/text-similarity:latest` <br>
-    `docker run pooyadav209712/text-similarity:latest`
+    `docker run -p 80:80 pooyadav209712/text-similarity:latest`
 
 **Method 3 - Python run:** <br> 
     Clone the repository <br>
