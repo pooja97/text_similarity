@@ -12,7 +12,7 @@ Programming Language:
 ## To Run: 
 Method 1 - Cloning the GitHub repository:  
     Clone the repository 
-    cd to the cloned folder and with that folder run command `docker build -t text-similarity .` using terminal 
+    cd to the cloned folder and within that folder run command <br> `docker build -t text-similarity .` using terminal. <br> 
     Once the docker image is created run command `docker run -p 80:80 text-similarity`
 
 Method 2 - Pulling the image from DockerHub:
