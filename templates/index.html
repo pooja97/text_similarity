@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Similarity Checker</title>
+</head>
+<body>
+    <h1>Text Similarity Checker</h1>
+    <form id="textForm">
+        <label for="text1">Text 1: </label>
+        <textarea id="text1" name="text1" rows="4" cols="50"></textarea>
+        <br>
+        <label for="text2">Text 2: </label>
+        <textarea id="text2" name="text2" rows="4" cols="50"></textarea>
+        <br>
+        <br>
+        <button type="button" onclick="submitForm()">Compare Texts</button>
+        <button type = "button" onclick="clearForm()">Clear Data</button>
+    </form>
+
+    <script>
+    function submitForm() {
+        var text1 = document.getElementById("text1").value;
+        var text2 = document.getElementById("text2").value;
+
+        var formData = {
+            text1: text1,
+            text2: text2
+        };
+
+        fetch('/compare', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            displayResult(data.similarity_score);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+    
+
+    function displayResult(similarity_score){
+        var resultElement = document.createElement('p');
+        resultElement.id = "result";
+        resultElement.textContent = 'Similarity Score: ' + similarity_score;
+        document.body.appendChild(resultElement);
+    }
+    function clearForm(){
+        document.getElementById('text1').value = "";
+        document.getElementById('text2').value = "";
+        var resultElement = document.getElementById("result");
+        if (resultElement){
+            resultElement.remove();
+        }
+    }
+
+    
+    </script>
+</body>
+</html>

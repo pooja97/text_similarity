@@ -1,7 +1,7 @@
 import re
 import string 
 from collections import Counter 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 
 app = Flask(__name__)
 
@@ -31,13 +31,15 @@ def calculate_cosine_similarity(freq1, freq2):
 def similarity_score(text1,text2):
     text1 = preprocess_txt(text1)
     text2 = preprocess_txt(text2)
-
     freq1 = calculate_word_frequencies(text1)
     freq2 = calculate_word_frequencies(text2)
-
     similarity = calculate_cosine_similarity(freq1,freq2)
-
     return similarity
+
+
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 @app.route('/compare',methods=['POST'])
 def compare_texts():
@@ -49,10 +51,10 @@ def compare_texts():
     text2 = data['text2']
 
     score = similarity_score(text1,text2)
-    return jsonify({'Similarity_score': score})
+    return jsonify({'similarity_score': score})
 
 if __name__ == '__main__':
-    app.run(debug=True,host='0.0.0.0',port=8000)
+    app.run(debug=True,host='0.0.0.0',port=8080)
 
 
 
