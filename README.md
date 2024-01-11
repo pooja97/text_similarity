@@ -11,16 +11,16 @@ Programming Language:
 
 ## To Run: 
 **Method 1 - Cloning the GitHub repository:** <br>
-    Clone the repository 
+    Clone the repository<br>
     cd to the cloned folder and within that folder run command <br> `docker build -t text-similarity .` using terminal. <br> 
     Once the docker image is created run command `docker run -p 80:80 text-similarity`
 
 **Method 2 - Pulling the image from DockerHub:** <br>
-    docker pull pooyadav209712/text-similarity:latest
-    docker run pooyadav209712/text-similarity:latest
+    `docker pull pooyadav209712/text-similarity:latest` <br>
+    `docker run pooyadav209712/text-similarity:latest`
 
 **Method 3 - Python run:** <br> 
-    clone the repository 
+    Clone the repository <br>
     run the follwing commands on the terminal <br> `source env/bin/activate` <br>
                                               `pip3 install -r requirements.txt` <br>
                                               `python3 app.py` <br>
