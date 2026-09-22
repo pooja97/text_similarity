@@ -11,7 +11,7 @@ Programming Language:<br>
 
 ## To Run: 
 
-**Method 1 - Pulling the image from DockerHub:** <br>
+**Method 1 - Pulling the image from the public Docker Hub repo:** <br>
     `docker pull pooyadav209712/text-similarity:latest` <br>
     `docker run -p 80:80 pooyadav209712/text-similarity:latest`
 
@@ -22,8 +22,9 @@ Programming Language:<br>
 
 **Method 3 - Python run:** <br> 
     Clone the repository <br>
-    run the follwing commands on the terminal <br> `source env/bin/activate` <br>
+    run the following commands on the terminal <br> `python3 -m venv env`<br>
+                                            `source env/bin/activate` <br>
                                               `pip3 install -r requirements.txt` <br>
                                               `python3 app.py` <br>
-    It will run on the url http://127.0.0.1:80
+    It will run on the local host
 
